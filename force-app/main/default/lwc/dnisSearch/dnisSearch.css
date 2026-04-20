@@ -1,0 +1,50 @@
+.page-container {
+    min-height: 260px;
+    position: relative;
+    padding-top: 10px;
+}
+
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 25px;
+}
+
+.center-table {
+    border-collapse: collapse;
+}
+
+.label-cell {
+    text-align: left;
+    vertical-align: middle;
+    padding-right: 30px;
+    white-space: nowrap;
+}
+
+.field-cell {
+    min-width: 260px;
+}
+
+.label-text {
+    font-weight: 400;
+    color: #181818;
+}
+
+.spacer-row {
+    height: 24px;
+}
+
+.button-row {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.spinner-wrap {
+    position: relative;
+    min-height: 80px;
+}
+
+.required-combobox {
+    --slds-c-input-color-border: #d60000;
+}

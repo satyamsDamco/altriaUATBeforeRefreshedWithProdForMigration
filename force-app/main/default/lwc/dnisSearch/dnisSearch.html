@@ -1,0 +1,52 @@
+<template>
+    <div class="vf-wrapper">
+        <template if:true={errorMessage}>
+            <div class="error-block">
+                {errorMessage}
+            </div>
+        </template>
+
+        <template if:true={isLoading}>
+            <div class="spinner-holder">
+                <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+            </div>
+        </template>
+
+        <div class="page-block">
+            <div class="center-area">
+                <table class="vf-table">
+                    <tr>
+                        <td class="label-cell">
+                            <label for="opSelected">Operating Company</label>
+                        </td>
+                        <td class="field-cell">
+                            <select
+                                id="opSelected"
+                                class="vf-select"
+                                value={opCompany}
+                                onchange={handleChange}>
+                                <template for:each={opCompanyOptions} for:item="opt">
+                                    <option key={opt.value} value={opt.value}>
+                                        {opt.label}
+                                    </option>
+                                </template>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2" class="button-cell">
+                            <button class="vf-button" onclick={handleSelect}>
+                                Select
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</template>
